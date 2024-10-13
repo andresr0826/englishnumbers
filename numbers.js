@@ -34,13 +34,17 @@ function ejecutar() {
     let etiqueta = document.createElement("h3");
     let pregunta = document.createTextNode("Escribe en inglés: " + numberArray[indice]);
     etiqueta.appendChild(pregunta);
-    document.getElementById("resultado").innerHTML = ""; // Limpiar resultados anteriores
-    document.getElementById("resultado").appendChild(etiqueta);
+    document.getElementById("respuesta").innerHTML = "";
+    document.getElementById("pregunta").innerHTML = "";
+    document.getElementById("resultado").innerHTML = "";
+    document.getElementById("pregunta").appendChild(etiqueta);
 }
 
 function comprobar() {
-    let respuesta = document.getElementById("respuesta").value.trim();
+
+    let respuesta = document.getElementById("respuesta").value.trim().toLowerCase();
     let etiqueta;
+
 
     if (wordsArray[indice] === respuesta) {
         etiqueta = document.createElement("p");
@@ -51,9 +55,11 @@ function comprobar() {
         etiqueta.textContent = "Oh no. La respuesta correcta es: " + wordsArray[indice];
         etiqueta.style.backgroundColor = "red";
     }
-    document.getElementById("resultado").appendChild(etiqueta);
 
+    document.getElementById("resultado").innerHTML = "";
+    document.getElementById("resultado").appendChild(etiqueta);
 }
+
 
 function mostrarRespuesta() {
     let etiqueta = document.createElement("p");

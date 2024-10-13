@@ -4,7 +4,7 @@
     <meta name="robots" content="noindex">
     <title>Numbers 1 to 1 million</title>
     <link rel="stylesheet" href="numbers.css">
-    <script src="numbers.js" defer></script> <!-- Asegúrate de que el archivo se llame "numbers.js" -->
+    <script src="numbers.js" defer></script> 
 </head>
 <body>
     <h1 class="centrado"><u>Numbers in English</u></h1>
@@ -12,15 +12,14 @@
     <div class="centrado">
         <input id="inicio" class="menu" type="button" value="Preguntar número" onclick="ejecutar();" /> 
     </div>
-    <!--<div class="centrado">
-        <input id="practicar" class="menu" type="button" value="Practicar" onclick="ejecutar();" /> 
-    </div>-->
+    <div id="pregunta" class="centrado"></div>
+
     <div class="cajaresp">
         <input type="text" id="respuesta" name="numrespuesta" placeholder="Escribe tu respuesta aquí"/>
         <input id="responder" type="button" value="Responder" onclick="comprobar();" />
         <input id="rendir" type="button" value="Mostrar respuesta" onclick="mostrarRespuesta();" />
     </div> 
-    <div id="resultado" class="centrado"></div> <!-- Este div mostrará el resultado y la pregunta -->
+    <div id="resultado" class="centrado"></div>
 
     <script>
         // El script que contiene la lógica debe ser referenciado desde numbers.js
